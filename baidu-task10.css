@@ -1,0 +1,101 @@
+/*参考网址：http://www.w3cplus.com/css3/flexbox-basics.html*/
+/*参考网址：https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes*/
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+.container
+{
+	/*min-width: 640px;*/
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.content1
+{
+	height: 120px;
+	width: 150px;
+	border: 1px #f00 solid;
+    float: left;
+    /*order: 2;*/
+}
+.content2
+{
+	height: 100px;
+	width: 150px;
+	border: 1px #f00 solid;
+	float: left;
+}
+.content3
+{
+	height: 40px;
+	width: 150px;
+	border: 1px #f00 solid;
+	float: left;
+}
+.content4
+{
+	height: 200px;
+	width: 150px;
+	border: 1px blue solid;
+	float: left;
+}
+
+@media all and (max-width: 640px) /*当屏幕的宽度大于640px，执行以下CSS*/
+
+
+
+{
+	.container
+{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.content1
+{
+	height: 120px;
+	width: 150px;
+	border: 1px #f00 solid;
+    float: left;
+    order: 1; /*排列顺序，数值越大越排到后面*/
+    margin-right: 13px;
+    margin-bottom: 20px;
+}
+.content2
+{
+	height: 100px;
+	width: 150px;
+	border: 1px #f00 solid;
+	float: left;
+	order: 2;
+	margin-right: 13px;
+	margin-bottom: : 20px;
+}
+.content3
+{
+	height: 40px;
+	width: 150px;
+	border: 1px #f00 solid;
+	float: left;
+	order: 3;
+    margin:0;
+
+}
+.content4
+{
+	height: 200px;
+	width: 150px;
+	border: 1px blue solid;
+	float: left;
+	order: 0;
+	margin-right: 13px;
+	margin-bottom: 20px;
+}
+}
